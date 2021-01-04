@@ -1,7 +1,8 @@
+#!/usr/local/bin/python3
 import os
 import abjad
 import organi
-import evans
+
 
 
 class SegmentMaker(abjad.SegmentMaker):
@@ -69,7 +70,8 @@ class SegmentMaker(abjad.SegmentMaker):
 
         chords_voice_one_elec=None,
         post_process_electronics=None,
-
+        
+        make_measures_pitched=True,
         indicators=None,
         includes=None,
         collect=True,
@@ -133,7 +135,8 @@ class SegmentMaker(abjad.SegmentMaker):
 
         self.chords_voice_one_elec = chords_voice_one_elec
         self.post_process_electronics = post_process_electronics
-
+        
+        self.make_measures_pitched = make_measures_pitched
         self.includes = includes
         self.collect = collect
 
@@ -498,7 +501,7 @@ class SegmentMaker(abjad.SegmentMaker):
             electronics.extend(electronics_chords)
 
         if self.post_process_electronics is not None:
-            self.post_process_electronics(electronics)
+            self.post_process_electronics(electronics, score)
 
 # SCORE #######################################################################
 
@@ -553,7 +556,7 @@ class SegmentMaker(abjad.SegmentMaker):
 
 
         if pitches is not None:
-            logical_ties = abjad.select(measures).leaves().logical_ties()
+            logical_ties = abjad.select(measures).leaves().logical_ties(pitched=self.make_measures_pitched)
             for i, logical_tie in enumerate(logical_ties):
                 index = i % len(pitches)
                 pitch = pitches[index]

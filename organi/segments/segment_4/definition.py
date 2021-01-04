@@ -6,8 +6,9 @@ from organi.materials.pitches import pitches_IV as pitches
 from organi.materials.rhythm import rhythm_makers_IV as rhythm
 from organi.materials.indicators import post_process_IV as indicators
 
+# SEGMENT 4
 
-time_signatures = [(6, 8)]*15
+time_signatures = [(6, 8)]*14
 
 durations_voice_two = [(6, 8)]*14
 durations_voice_four = [(6, 8)]*14
@@ -44,13 +45,16 @@ segment_maker = SegmentMaker(
     rest_interval_voice_five="s1*3",
     make_those_chords_voice_five=True,
     post_process_voice_five=indicators.post_process_voice_five,
+    post_process_electronics=indicators.post_process_electronics,
+    
+    make_measures_pitched=None,
 
     includes=includes,
     collect=True,
     )
 
 if __name__ == '__main__':
-    lilypond_file, _ = segment_maker()
+    lilypond_file = segment_maker.run()
     illustration_path = os.path.join(
         os.path.dirname(__file__),
         'Illustration.pdf',

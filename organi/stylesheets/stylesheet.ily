@@ -9,11 +9,12 @@
 }
 
 \paper {
-  #(set-paper-size "a4")
-  system-system-spacing = #'((basic-distance . 15)
-       (minimum-distance . 10)
-       (padding . 10)
-       (stretchability . 1))
+	print-page-number = ##t
+ 	#(set-paper-size "a4")
+ 	 system-system-spacing = #'((basic-distance . 15)
+     	(minimum-distance . 10)
+      	(padding . 10)
+       	(stretchability . 1))
 
   top-margin = 30
   left-margin = 16

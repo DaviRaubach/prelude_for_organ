@@ -100,21 +100,24 @@ def post_process_voice_two(voice_two, score):
     stop_accel_text_span = abjad.StopTextSpan(command=r"\stopTextSpan")
     abjad.attach(stop_accel_text_span, voice_two[-1])
 
-    voice_two.append(abjad.Container(
-        r"""cs'''2
-            (
-            g''8
-            )
-            r8
-            r8
-            fs'''4
-            ~
-            (
-            fs'''4
-            g'''8
-            )
-        """
-        ))
+    # voice_two.append(abjad.Container(
+    #     r"""cs'''2
+    #         (
+    #         g''8
+    #         )
+    #         r8
+    #         r8
+    #         fs'''4
+    #         ~
+    #         (
+    #         fs'''4
+    #         g'''8
+    #         )
+    #     """
+    #     ))
+    
+    voice_two[-1].written_pitch = "af''"
+    abjad.attach(abjad.Tie(), voice_two[-1])
 
     return voice_two
 
@@ -137,7 +140,7 @@ def post_process_voice_four(voice_four, score):
     # numbered leaves
     selection = abjad.select(voice_four).leaves()
     for i, leaf in enumerate(selection):
-        # abjad.attach(abjad.Markup(i), leaf)   ########################################################
+        # abjad.attach(abjad.Markup(i), leaf)
         pass
 
     # add tenuto
@@ -187,23 +190,7 @@ def post_process_voice_four(voice_four, score):
 
     abjad.attach(abjad.Clef("bass"), voice_four[0])
 
-    voice_four.append(abjad.Container(
-        r"""b8
-            \clef "treble"
-            ds'4
-            ~
-            ds'8
-            fs'8
-            )
-            r8
-            as'4.
-            (
-            d''8
-            )
-            r8
-            f''8
-        """
-        ))
+    voice_four[-1] = "r8"
     return voice_four
 
 
@@ -213,5 +200,6 @@ def post_process_voice_five(voice_five):
     return voice_five
 
 
-def post_process_electronics(electronics):
+def post_process_electronics(electronics, score):
+    del score[1]
     return electronics

@@ -1,6 +1,5 @@
 import abjad
 
-
 # self.score_template = organi.ScoreTemplate()
 def post_process_voice_one(voice_one, score):
     # delete something
@@ -139,7 +138,7 @@ def post_process_voice_four(voice_four, score):
     return voice_four
 
 
-def post_process_electronics(electronics):
+def post_process_electronics(electronics, score):
     # CHORD ZERO ELECTRONICS
     chord_zero_electronics = ("cqs'32 f' gs' c'' e'' ftqs'' gqs'' gs'' b''"
                               "cs''' ctqs''' f''' fs''' ftqs''' gs''' s32 s2")
@@ -202,5 +201,7 @@ def post_process_electronics(electronics):
     #     left_broken=True,
     #     right_broken=True,
     #     hide_middle_note_heads=True,)
-
+    
+    # DELETE ELECTRONICS FOR ORGAN SCORE
+    del score[1]
     return electronics

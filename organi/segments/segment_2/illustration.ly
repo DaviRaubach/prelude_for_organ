@@ -193,80 +193,70 @@
                     r2.
                     r8
                     \clef "treble"
-                    ds'''4
+                    f'''4
                     ~
                     \clef "treble"
-                    ds'''4
+                    f'''4
                     (
+                    \clef "bass"
+                    e,8
+                    \clef "treble"
+                    ds'''2
+                    )
+                    r4
+                    r4.
+                    \clef "bass"
+                    b,4.
+                    ~
                     \clef "bass"
                     b,8
-                    \clef "treble"
-                    cs'''2
-                    )
-                    r4
-                    r4.
-                    \clef "treble"
-                    a''4.
-                    ~
-                    \clef "treble"
-                    a''8
                     [
                     (
-                    \clef "bass"
-                    ef,8
+                    \clef "treble"
+                    cs'''8
                     ]
                     \clef "treble"
-                    af''2
-                    \clef "treble"
-                    g''8
+                    c''2
+                    \clef "bass"
+                    b,8
                     )
                     r4
                     r4.
                     \clef "treble"
-                    d''2
+                    a''2
                     _ (
                     \clef "bass"
-                    cs,8
+                    ds,8
                     [
                     \clef "treble"
-                    bf'8
+                    gs''8
                     ~
                     ]
                     \clef "treble"
-                    bf''4.
+                    gs''4.
                     )
                     r4.
+                    \change Staff = RH_Staff
                     r4
                     \tempo "meno mosso"
-                    \clef "bass"
-                    c,2
-                    _ (
-                    \change Staff = RH_Staff
                     \clef "treble"
-                    ef''8
+                    g'2
+                    _ (
+                    \clef "treble"
+                    f'''8
                     )
                     \change Staff = LH_Staff
                     \clef "bass"
-                    ef,4
+                    af,4
                     ~
                     \clef "bass"
-                    ef,4.
+                    af,4.
                     \fermata
                 }
                 \context Voice = "LH_Voice_Five"
                 {
                 }
             >>
-        >>
-        \context Staff = "Electronics_Staff"
-        <<
-            \set Staff.instrumentName = \markup{Electronics}
-            \context Voice = "Global_Context_III"
-            {
-            }
-            \context Voice = "RH_Voice_One_Electronics"
-            {
-            }
         >>
     >>
 } %! abjad.LilyPondFile._get_formatted_blocks()

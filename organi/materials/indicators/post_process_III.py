@@ -141,7 +141,8 @@ def post_process_voice_four(voice_four, score):
     return voice_four
 
 
-def post_process_electronics(electronics):
+def post_process_electronics(electronics, score):
+    del score[1]
     # elec_literal = r"b4 s4 s4 s4 b4"
     # electronics.extend(elec_literal)
     # abjad.attach(abjad.LilyPondLiteral(

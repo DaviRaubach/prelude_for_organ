@@ -30,7 +30,6 @@
                     s1 * 3/4
                     s1 * 3/4
                     s1 * 3/4
-                    s1 * 3/4
                 }
                 \context Voice = "RH_Voice_One"
                 {
@@ -164,23 +163,10 @@
                     ~
                     (
                     d''4
-                    a''8
+                    af''8
                     )
                     \stopTextSpan
-                    {
-                        cs'''2
-                        (
-                        g''8
-                        )
-                        r8
-                        r8
-                        fs'''4
-                        ~
-                        (
-                        fs'''4
-                        g'''8
-                        )
-                    }
+                    ~
                 }
                 \context Voice = "RH_Voice_Three"
                 {
@@ -190,7 +176,6 @@
             <<
                 \context Voice = "Global_Context_II"
                 {
-                    s1 * 3/4
                     s1 * 3/4
                     s1 * 3/4
                     s1 * 3/4
@@ -292,24 +277,7 @@
                     a,8
                     )
                     r8
-                    ds8
-                    - \tenuto
-                    {
-                        b8
-                        \clef "treble"
-                        ds'4
-                        ~
-                        ds'8
-                        fs'8
-                        )
-                        r8
-                        as'4.
-                        (
-                        d''8
-                        )
-                        r8
-                        f''8
-                    }
+                    r8
                 }
                 \context Voice = "LH_Voice_Five"
                 {
@@ -362,15 +330,5 @@
                     }
                 }
             >>
-        >>
-        \context Staff = "Electronics_Staff"
-        <<
-            \set Staff.instrumentName = \markup{Electronics}
-            \context Voice = "Global_Context_III"
-            {
-            }
-            \context Voice = "RH_Voice_One_Electronics"
-            {
-            }
         >>
     >>

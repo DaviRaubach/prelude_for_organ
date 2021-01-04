@@ -94,9 +94,14 @@ def post_process_voice_four(voice_four, score):
     voice_four[-2].written_duration = (1, 4)
     del voice_four[-1]
     voice_four[-1].written_duration = (3, 8)
-    abjad.mutate(voice_four[17]).transpose(-12)
+    # abjad.mutate(voice_four[17]).transpose(-12)
 
-
+    # numbered leaves
+    selection = abjad.select(voice_four).leaves()
+    for i, leaf in enumerate(selection):
+        # abjad.attach(abjad.Markup(i), leaf)
+        pass
+        
     # change staff
     rh_staff = score['Piano_Staff'][0]
     lh_staff = score['Piano_Staff'][1]
@@ -104,8 +109,14 @@ def post_process_voice_four(voice_four, score):
 
     staff_change1 = abjad.StaffChange(lh_staff)
     staff_change2 = abjad.StaffChange(rh_staff)
-    abjad.attach(staff_change2, voice_four[-3])
+    abjad.attach(staff_change2, voice_four[-5])
     abjad.attach(staff_change1, voice_four[-2])
+    
+    voice_four[-3].written_pitch = "f''''"
+    voice_four[-4].written_pitch = "g''"
+    voice_four[14].written_pitch = "c'''"
+    
+    
 
     abjad.attach(abjad.Fermata(), voice_four[-1])
 
@@ -128,9 +139,13 @@ def post_process_voice_four(voice_four, score):
         if test_note is True and test1 is True:
             abjad.attach(clef1, voice_four[i])
 
-    abjad.Accidental.respell_with_sharps(voice_four[5:7])
+    abjad.Accidental.respell_with_sharps(voice_four[8:9])
+    abjad.Accidental.respell_with_sharps(voice_four[19:22])
+    
+    
     # REGISTER TRANSPOSITION
-    abjad.mutate(voice_four[:-7]).transpose(-12)
+    abjad.mutate(voice_four).transpose(-12)
+    #[:-7]
 
     # slurs
     start_slur = abjad.StartSlur()
@@ -156,7 +171,8 @@ def post_process_voice_four(voice_four, score):
     return voice_four
 
 
-def post_process_electronics(electronics):
+def post_process_electronics(electronics, score):
+    del score[1]
     # elec_literal = r"b4 s4 s4 s4 b4"
     # electronics.extend(elec_literal)
     # abjad.attach(abjad.LilyPondLiteral(

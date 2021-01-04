@@ -1,6 +1,6 @@
 import abjad
+import random
 from organi.tools.see_pitches import see_pitches
-
 
 # RECURSES TO MODIFY PITCH SEGMENTS
 # A C B D C E
@@ -19,8 +19,12 @@ def permut_thirds(pitches):
 
 
 # FREQ_B - FREQ_A AND FREQ_B + FREQ_A
-def ring_modulation(pitches, sum=True, chords=False):
-    pitches_in = pitches.hertz
+def ring_modulation(pitches, sum=True, chords=False, hertz=False):
+    if hertz is True:
+        pitches_in = pitches
+    else:
+        pitches_in = pitches.hertz
+    
     pitches_out = []
     if sum is True and chords is False:
         for pitch1, pitch2 in zip(pitches_in, pitches_in[1:]):
@@ -55,14 +59,6 @@ def ring_modulation(pitches, sum=True, chords=False):
             pitches_out.append(chord)
     return pitches_out
 
-# VOICE ONE
-chord_voice_one = abjad.pitch.PitchSegment(
-    "g''' fs''' " +
-    "f''' d''' cs''' " +
-    "b'' af'' g'' " +
-    "e'' c'' g' " +
-    "fs'"
-    )
 
 # ORIGINAL CHORD
 pitches = []
@@ -70,27 +66,12 @@ original_chord = abjad.pitch.PitchSegment(
     "cqs' f' gs' c'' e'' ftqs'' gqs''"
     + " gs'' b'' cs''' ctqs''' f''' fs''' ftqs'''  gs'''"
     )
-pitches = ring_modulation(original_chord, sum=False)
+    
+pitches = ring_modulation(original_chord, sum=True)
 pitches = [abjad.NamedPitch.from_hertz(_) for _ in pitches]
-# abjad.show(abjad.pitch.PitchSegment(pitches))
 num_pitches = [abjad.NamedPitch(_).number for _ in pitches]
 
-# STAFFGROUP TO VERIFY THE NOTES IN ring_modulation
-G_staff = abjad.Staff()
-F_staff = abjad.Staff()
-notes_range = abjad.pitch.PitchRange("[C4, +inf]")
-for note in pitches:
-    test = note in notes_range
-    if test is True:
-        # note = abjad.Note(note, (1, 1))
-        G_staff.append(abjad.Note.from_pitch_and_duration(note, (1, 1)))
-    else:
-        # note = abjad.Leaf(note, (1, 1))
-        F_staff.append(abjad.Note.from_pitch_and_duration(note, (1, 1)))
-abjad.attach(abjad.Clef("treble^8"), G_staff[0])
-abjad.attach(abjad.Clef("bass_8"), F_staff[0])
-staff = abjad.StaffGroup([G_staff, F_staff], lilypond_type="PianoStaff")
-# abjad.f(staff)
+# see_pitches(num_pitches)
 
 # NO MICROTONAL
 for item, i in zip(num_pitches, range(len(num_pitches))):
@@ -98,31 +79,59 @@ for item, i in zip(num_pitches, range(len(num_pitches))):
         item = item - 0.5
         num_pitches[i] = item
 
-# num_pitches.sort()
-# maker = abjad.LeafMaker()
-# num_pitches_notes = maker(num_pitches, (1, 1))
-# num_pitches_notes = abjad.Staff(num_pitches_notes)
-# num_pitches_score = abjad.LilyPondFile.new(music=num_pitches_notes)
-# abjad.f(num_pitches_score)
-
 # see_pitches(num_pitches)
-pitch_range = abjad.PitchRange("[C2, G7]")
-pitches = []
-for pitch in num_pitches:
-    test = pitch in pitch_range
-    if test is True:
-        pitches.append(pitch)
-    else:
-        pass
-for i, pitch in enumerate(pitches):
-    if pitch <= -12:
-        pitches[i] = pitch + 12
-pitches = abjad.pitch.PitchSegment(pitches)
-# VOICE FOUR
-pitches_voice_four = pitches.retrograde()
-pitches_voice_four = pitches_voice_four.rotate(n=-2)
-# see_pitches(pitches_voice_four)
 
+# THREE VOICES - THREE PITCH RANGES
+
+pitches_low = []
+pitches_middle = []
+pitches_treble = []
+
+low_range = abjad.pitch.PitchRange("[F3, B4]")
+middle_range = abjad.pitch.PitchRange("[C5, B5]")
+treble_range = abjad.pitch.PitchRange("[C6, G7]")
+
+for note in num_pitches:
+    test1 = note in low_range
+    test2 = note in middle_range
+    test3 = note in treble_range
+    if test1 is True:
+        pitches_low.append(note)
+    if test2 is True:
+        pitches_middle.append(note)
+    if test3 is True:
+        pitches_treble.append(note)
+
+
+# see_all_pitches = pitches_low + [-20] + pitches_middle + [-20] + pitches_treble
+del pitches_treble[0:3]
+
+# DESISTI: pitches_low = original_chord_semitones do segment_1 e mais algumas do original chord + ring modulation abaixo
+
+pitches_low = "f c' ef' e' c'' bf' b' c'' ef'' e'' bf''"
+
+
+
+pitches_low = abjad.pitch.PitchSegment(pitches_low)
+pitches_middle = abjad.pitch.PitchSegment(pitches_middle)
+pitches_treble = abjad.pitch.PitchSegment(pitches_treble)
+
+
+
+# VOICE TWO
+pitches_voice_two = pitches_treble
+print("pitches 2 =" + str(pitches_voice_two))
+
+# VOICE THREE
+pitches_voice_three = pitches_middle
+print("pitches 3 =" + str(pitches_voice_three))
+
+# VOICE FOUR
+pitches_voice_four = pitches_low
+print("pitches 4 =" + str(pitches_voice_four))
+
+# PITCHES LOW PRECISA SER O ACORDE DO INÍCIO SEI LA
+# TODO: COPIAR ACORDE DO INICIO PARA VOICE_FOUR
 
 # ORIGINAL CHORD + RING MODULATION em ordem ascendente
 # \new Voice

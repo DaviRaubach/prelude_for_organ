@@ -52,5 +52,7 @@ def see_pitches(pitches):
                 abjad.attach(clef1, F_staff[i])
             elif test0 is True:
                 abjad.attach(clef0, F_staff[i])
-
+    
+    abjad.show(staff_group)
+    
     return staff_group

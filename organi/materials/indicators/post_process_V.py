@@ -210,7 +210,7 @@ def post_process_voice_four(voice_four, score):
     voice_four.append('r2.')
     abjad.attach(abjad.Fermata(), voice_four[-1])
     place = abjad.Markup("Pelotas - RS.", direction=abjad.Down,)
-    date = abjad.Markup("May - October 2020.")
+    date = abjad.Markup("May - December 2020.")
     markup = abjad.Markup.right_column([place, date], direction=abjad.Down,)
     markup = markup.italic()
     markup = score.add_final_markup(markup, extra_offset=(14.5, -2),)
@@ -219,7 +219,7 @@ def post_process_voice_four(voice_four, score):
     return voice_four
 
 
-def post_process_electronics(electronics):
+def post_process_electronics(electronics, score):
     # CHORD ZERO ELECTRONICS
     
     # ELECTRONICS
@@ -275,6 +275,8 @@ def post_process_electronics(electronics):
             abjad.attach(clef1, selection[i])
         elif test_note is True and test0 is True:
             abjad.attach(clef0, selection[i])
+            
+    del score[1]
     return electronics
 
 

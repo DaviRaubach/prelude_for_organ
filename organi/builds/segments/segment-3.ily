@@ -226,14 +226,4 @@
                 }
             >>
         >>
-        \context Staff = "Electronics_Staff"
-        <<
-            \set Staff.instrumentName = \markup{Electronics}
-            \context Voice = "Global_Context_III"
-            {
-            }
-            \context Voice = "RH_Voice_One_Electronics"
-            {
-            }
-        >>
     >>

@@ -6,6 +6,7 @@ from organi.materials.pitches import pitches_III as pitches
 from organi.materials.rhythm import rhythm_makers_III as rhythm
 from organi.materials.indicators import post_process_III as indicators
 
+# SEGMENT 3
 
 time_signatures = [(6, 8)]*12
 
@@ -36,7 +37,9 @@ segment_maker = SegmentMaker(
     rhythm_maker_voice_four=rhythm.rhythm_maker_voice_four,
     pitches_voice_four=pitches.pitches_voice_four,
     post_process_voice_four=indicators.post_process_voice_four,
+    post_process_electronics=indicators.post_process_electronics,
 
+    make_measures_pitched=None,
     includes=includes,
     collect=True,
     )

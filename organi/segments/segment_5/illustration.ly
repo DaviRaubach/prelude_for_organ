@@ -620,30 +620,20 @@
                     \once \override TextScript.extra-offset = #'(14.5 . -2)
                     r2.
                     \fermata
-                    _ \markup {                           %! SCORE_2
-                        \italic                           %! SCORE_2
-                            \right-column                 %! SCORE_2
-                                {                         %! SCORE_2
-                                    "Pelotas - RS."       %! SCORE_2
-                                    "May - October 2020." %! SCORE_2
-                                }                         %! SCORE_2
-                        }                                 %! SCORE_2
+                    _ \markup {                            %! SCORE_2
+                        \italic                            %! SCORE_2
+                            \right-column                  %! SCORE_2
+                                {                          %! SCORE_2
+                                    "Pelotas - RS."        %! SCORE_2
+                                    "May - December 2020." %! SCORE_2
+                                }                          %! SCORE_2
+                        }                                  %! SCORE_2
                     \bar "|." %! SCORE_1
                 }
                 \context Voice = "LH_Voice_Five"
                 {
                 }
             >>
-        >>
-        \context Staff = "Electronics_Staff"
-        <<
-            \set Staff.instrumentName = \markup{Electronics}
-            \context Voice = "Global_Context_III"
-            {
-            }
-            \context Voice = "RH_Voice_One_Electronics"
-            {
-            }
         >>
     >>
 } %! abjad.LilyPondFile._get_formatted_blocks()

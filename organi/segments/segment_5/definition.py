@@ -6,18 +6,15 @@ from organi.materials.pitches import pitches_V as pitches
 from organi.materials.rhythm import rhythm_makers_V as rhythm
 from organi.materials.indicators import post_process_V as indicators
 
+# SEGMENT 5
 
 time_signatures = [(6, 8)]*22
 
 durations_voice_one = [(6, 8)]*21
-
 durations_voice_four = [(6, 8)]*21
 
-# initial_rest_voice_one = r"r4."
 initial_rest_voice_two = r"r8"
 initial_rest_voice_three = r"r4."
-# initial_rest_voice_four = r"r8"
-
 
 includes = ['../../stylesheets/segment_ii_stylesheet.ily']
 
@@ -36,8 +33,8 @@ segment_maker = SegmentMaker(
     pitches_voice_four=pitches.pitches_voice_four,
     post_process_voice_four=indicators.post_process_voice_four,
 
-    # post_process_electronics=indicators.post_process_electronics,
-
+    post_process_electronics=indicators.post_process_electronics,
+    make_measures_pitched=None,
     includes=includes,
     collect=True,
     )

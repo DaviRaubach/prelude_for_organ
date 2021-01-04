@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3.7
 # -*- encoding: utf-8 -*-
 import os
 import abjad
@@ -5,6 +6,8 @@ from organi.tools import SegmentMaker
 from organi.materials.pitches import pitches_I as pitches
 from organi.materials.rhythm import rhythm_makers_I as rhythm
 from organi.materials.indicators import post_process_I as indicators
+
+# SEGMENT 1
 
 rest_organ = abjad.Rest("r1")
 abjad.attach(abjad.Fermata("verylongfermata"), rest_organ)
@@ -35,14 +38,15 @@ segment_maker = SegmentMaker(
     post_process_voice_four=indicators.post_process_voice_four,
 
     # chords_voice_one_elec=None,
-    # post_process_electronics=indicators.post_process_electronics,
+    post_process_electronics=indicators.post_process_electronics,
 
     includes=includes,
     collect=True,
     )
 
+
 if __name__ == '__main__':
-    lilypond_file, _ = segment_maker()
+    lilypond_file = segment_maker.run()
     illustration_path = os.path.join(
         os.path.dirname(__file__),
         'Illustration.pdf',
@@ -50,6 +54,7 @@ if __name__ == '__main__':
     abjad.persist(lilypond_file).as_pdf(illustration_path)
     abjad.system.IOManager.open_file(illustration_path)
 # score = segment_maker.run()
+# abjad.show(score)
 #
 # voice_one = score['RH_Voice_One']
 # global_staff = score['Global_Context']

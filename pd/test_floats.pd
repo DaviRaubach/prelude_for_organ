@@ -1,0 +1,10 @@
+#N canvas 0 22 450 300 12;
+#X obj 40 55 loadbang;
+#X obj 40 98 expr (\$2 + 1)*24;
+#X floatatom 40 122 5 0 0 0 - - -;
+#X obj 40 145 print;
+#X obj 240 115 float \$1;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;

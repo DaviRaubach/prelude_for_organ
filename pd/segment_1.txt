@@ -1,0 +1,6 @@
+0 section symbol Section_A;
+0 smooth 2000;
+0 rand_amp_on 0;
+0 rand_dyn_range 100 5000;
+500 note 6 0 15000;
+500 note 7 0.4 5000;

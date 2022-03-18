@@ -1,0 +1,105 @@
+#N canvas 123 120 966 570 12;
+#X obj 80 120 hoa.2d.encoder~ 3;
+#X obj 80 150 hoa.2d.decoder~ 3;
+#X obj 226 140 hoa.scope~ @size 120 120 @receive "(null)" @send "(null)"
+@pinned 0 @background_color 0.93 0.93 0.93 1 @border_color 0.6 0.6
+0.6 1 @label_color 0 0 0 1 @ph_color 1 0 0 1 @nh_color 0 0 1 1 @fontname
+"Helvetica" @fontweight "normal" @fontslant "roman" @fontsize 11 @label
+"(null)" @label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 0 @gain 1 @refresh 100 @order 3 @view 0;
+#X floatatom 251 58 5 0 0 0 - - -;
+#X obj 369 33 dsp;
+#X obj 370 13 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 60 52 osc~ 220;
+#X obj 446 37 msg.onload;
+#X text 486 20 use Alt+drag to fix radius value;
+#X obj 446 66 ui.polar @size 100 100 @receive "(null)" @send "(null)"
+@pinned 0 @presetname "ui.polar.0" @mouse_events 0 @background_color
+0.93 0.93 0.93 1 @border_color 0.6 0.6 0.6 1 @label_color 0 0 0 1 @fontname
+"Helvetica" @fontweight "normal" @fontslant "roman" @fontsize 11 @label
+"(null)" @label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 0 @clockwise 0 @radians 1 @positive 0 @direction
+"E";
+#X obj 599 108 ui.polar @size 102 102 @receive "(null)" @send "(null)"
+@pinned 0 @presetname "ui.polar.1" @mouse_events 0 @background_color
+0.93 0.93 0.93 1 @border_color 0.6 0.6 0.6 1 @label_color 0 0 0 1 @fontname
+"Helvetica" @fontweight "normal" @fontslant "roman" @fontsize 11 @label
+"(null)" @label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 0 @clockwise 0 @radians 1 @positive 0 @direction
+"E";
+#X obj 320 290 ui.radio @size 31 15 @receive "(null)" @send "(null)"
+@pinned 0 @presetname "ui.radio.0" @mouse_events 0 @background_color
+0.93 0.93 0.93 1 @border_color 0.6 0.6 0.6 1 @label_color 0 0 0 1 @active_color
+0 0.75 1 1 @fontname "Helvetica" @fontweight "normal" @fontslant "roman"
+@fontsize 11 @label "(null)" @label_inner 0 @label_side "top" @label_align
+"left" @label_valign "top" @label_margins 0 0 @nitems 2 @mode 1;
+#X msg 320 319 0 \$1 \, 1 \$2;
+#X obj 446 233 msg polar 0;
+#X obj 599 214 msg polar 1;
+#X obj 320 347 msg mute;
+#X obj 446 358 hoa.scope~ @size 164 164 @receive "(null)" @send "(null)"
+@pinned 0 @background_color 0.93 0.93 0.93 1 @border_color 0.6 0.6
+0.6 1 @label_color 0 0 0 1 @ph_color 1 0 0 1 @nh_color 0 0 1 1 @fontname
+"Helvetica" @fontweight "normal" @fontslant "roman" @fontsize 11 @label
+"(null)" @label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 0 @gain 1 @refresh 100 @order 3 @view 0;
+#X obj 446 329 hoa.2d.map~ 3 15, f 23;
+#X obj 726 102 ui.polar @size 102 102 @receive "(null)" @send "(null)"
+@pinned 0 @presetname "ui.polar.2" @mouse_events 0 @background_color
+0.93 0.93 0.93 1 @border_color 0.6 0.6 0.6 1 @label_color 0 0 0 1 @fontname
+"Helvetica" @fontweight "normal" @fontslant "roman" @fontsize 11 @label
+"(null)" @label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 0 @clockwise 0 @radians 1 @positive 0 @direction
+"E";
+#X obj 726 208 msg polar 2;
+#X obj 105 313 expr $f1 * (3.14159 / 180);
+#X obj 52 340 pack 0 0;
+#X msg 52 314 1;
+#X obj 52 237 loadbang;
+#X obj 105 289 expr (\$2 + 1)*24;
+#X obj 52 263 t a a;
+#X obj 52 364 msg polar \$2;
+#X obj 52 388 s to_hoa.map;
+#X connect 0 0 2 0;
+#X connect 0 0 1 0;
+#X connect 0 1 2 1;
+#X connect 0 1 1 1;
+#X connect 0 2 2 2;
+#X connect 0 2 1 2;
+#X connect 0 3 2 3;
+#X connect 0 3 1 3;
+#X connect 0 4 2 4;
+#X connect 0 4 1 4;
+#X connect 0 5 2 5;
+#X connect 0 5 1 5;
+#X connect 0 6 2 6;
+#X connect 0 6 1 6;
+#X connect 3 0 0 1;
+#X connect 5 0 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 9 0;
+#X connect 9 0 13 0;
+#X connect 10 0 14 0;
+#X connect 11 0 12 0;
+#X connect 12 0 15 0;
+#X connect 13 0 17 0;
+#X connect 14 0 17 0;
+#X connect 15 0 17 0;
+#X connect 17 0 16 0;
+#X connect 17 1 16 1;
+#X connect 17 2 16 2;
+#X connect 17 3 16 3;
+#X connect 17 4 16 4;
+#X connect 17 5 16 5;
+#X connect 17 6 16 6;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 20 0 21 1;
+#X connect 21 0 26 0;
+#X connect 22 0 21 0;
+#X connect 23 0 25 0;
+#X connect 24 0 20 0;
+#X connect 25 0 22 0;
+#X connect 25 1 24 0;
+#X connect 26 0 27 0;

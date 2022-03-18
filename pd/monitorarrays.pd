@@ -1,0 +1,169 @@
+#N canvas 0 22 450 300 12;
+#X obj 106 61;
+#N canvas 0 22 450 300 parameters_monitor_arrays 0;
+#N canvas 0 22 778 453 (subpatch) 0;
+#X array a-original 100 float 5;
+#A 0 0.2256 0.31136 0.33952 0.368 0.39616 0.4 0.4 0.4 0.4 0.4 0.4 0.4
+0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4
+0.4 0.4 0.4 0.4 0.4 0.46 0.46 0.5 0.52 0.52 0.52 0.52 0.52 0.52 0.52
+0.52 0.52 0.52 0.52 0.52 0.52 0.52 0.52 0.52 0.5 0.5 0.5 0.5 0.5 0.48
+0.48 0.48 0.46 0.46 0.46 0.44 0.44 0.44 0.44 0.42 0.4 0.4 0.4 0.4 0.312
+0.224 0 0.048 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 99 0 200 50 1 0 0;
+#X restore 23 69 graph;
+#N canvas 0 22 450 300 a-original 0;
+#X obj 29 161 tabwrite a-original;
+#X obj 47 37 r original;
+#X obj 47 61 line;
+#X obj 177 66 r event_number;
+#X obj 29 135 f;
+#X obj 97 96 t b b;
+#X obj 159 135 f;
+#X connect 1 0 2 0;
+#X connect 2 0 4 1;
+#X connect 3 0 6 1;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 5 1 4 0;
+#X connect 6 0 0 1;
+#X restore 128 30 pd a-original;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array a-vib_coeficient 100 float 5;
+#A 0 1 1 1 2 2 2 2 1 1 1 1 1 1 1 1 5 5 5 5 3 3 3 3 3 3 3 3 3 3 3 3
+3 3 3 3 3 0 3 3 3 3 3 3 0 3 3 3 3 3 0 3 3 3 3 3 0 4 4 6 6 6 0 6 6 6
+6 6 6 6 0 6 6 6 6 6 0 6 6 6 6 6 6 6 6 6 0 6 6 6 6 0 6 6 6 6 6 6 6 6
+6;
+#X coords 0 12 99 0 200 50 1 0 0;
+#X restore 23 184 graph;
+#N canvas 0 22 631 411 a-vib_coeficient 0;
+#X obj 47 61 line;
+#X obj 177 66 r event_number;
+#X obj 29 135 f;
+#X obj 97 96 t b b;
+#X obj 159 135 f;
+#X obj 47 37 r vib_coeficient;
+#X obj 29 161 tabwrite a-vib_coeficient;
+#X connect 0 0 2 1;
+#X connect 1 0 4 1;
+#X connect 1 0 3 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 3 1 2 0;
+#X connect 4 0 6 1;
+#X connect 5 0 0 0;
+#X restore 86 145 pd a-vib_coeficient;
+#N canvas 0 0 1440 872 score_electronics 0;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array a-original-A 40 float 3;
+#A 0 0.0249995 0.2 0.514997 0.549996 0.564995 0.574995 0.584995 0.584995
+0.594995 0.594995 0.584995 0.569995 0.569995 0.554996 0.539996 0.519997
+0.514997 0.504997 0.504997 0.504997 0.489997 0.514997 0.529996 0.539996
+0.549996 0.574995 0.589995 0.575 0.559996 0.569995 0.569995 0.529987
+0.514987 0.435 0.365003 0.3 0.150008 0.045 0.095 0.275;
+#X coords 0 1 40 0 400 100 1 0 0;
+#X restore 56 31 graph;
+#X obj 154 335 s original;
+#X obj 71 240 r event_number;
+#X obj 69 352 r original;
+#X floatatom 69 376 5 0 0 0 - - -;
+#X obj 486 744 f;
+#X obj 441 707 t b b;
+#X obj 410 744 f;
+#X obj 338 736 line;
+#X msg 338 662 0 \, 1;
+#X obj 354 688 del 1;
+#X msg 380 714 0;
+#X symbolatom 396 515 10 0 0 0 - - -;
+#X obj 397 489 r measure;
+#X floatatom 515 698 5 0 0 0 - - -;
+#X obj 396 538 sel measure10;
+#X obj 396 562 0;
+#X obj 344 631 spigot;
+#X obj 344 542 bang;
+#X obj 505 667 r event_number;
+#X obj 379 777 tabwrite a-measures-A;
+#X msg 104 492 \; antescofo-mess play \;;
+#X obj 284 646 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 532 308 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 529 333 \; antescofo-mess tempo \$1 \;;
+#X obj 529 260 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 529 280 metro 1000;
+#X obj 384 612 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array a-measures-A 40 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0;
+#X coords 0 1 39 0 400 20 1 0 0;
+#X restore 613 455 graph;
+#X obj 71 268 tabread a-original-A;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X coords 0 1 39 0 40 20 1 0 0;
+#X restore 66 131 graph;
+#X obj 71 292 pack 0 200;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X coords 0 1 39 0 60 20 1 0 0;
+#X restore 106 131 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X coords 0 1 39 0 60 20 1 0 0;
+#X restore 166 131 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X coords 0 1 39 0 60 20 1 0 0;
+#X restore 226 131 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X coords 0 1 39 0 60 20 1 0 0;
+#X restore 286 131 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X coords 0 1 39 0 60 20 1 0 0;
+#X restore 346 131 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X coords 0 1 39 0 30 20 1 0 0;
+#X restore 406 131 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X coords 0 1 39 0 10 20 1 0 0;
+#X restore 56 131 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X coords 0 1 39 0 20 20 1 0 0;
+#X restore 436 131 graph;
+#X text 53 150 1;
+#X text 65 150 2;
+#X text 105 150 3;
+#X text 165 150 4;
+#X text 225 150 5;
+#X text 285 150 6;
+#X text 345 150 7;
+#X text 405 150 8;
+#X text 435 150 9;
+#X connect 2 0 29 0;
+#X connect 3 0 4 0;
+#X connect 5 0 20 1;
+#X connect 6 0 7 0;
+#X connect 6 1 5 0;
+#X connect 7 0 20 0;
+#X connect 8 0 7 1;
+#X connect 9 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 0;
+#X connect 11 0 8 0;
+#X connect 12 0 15 0;
+#X connect 12 0 18 0;
+#X connect 13 0 12 0;
+#X connect 15 0 16 0;
+#X connect 16 0 27 0;
+#X connect 17 0 9 0;
+#X connect 17 0 22 0;
+#X connect 18 0 17 0;
+#X connect 19 0 5 1;
+#X connect 19 0 6 0;
+#X connect 19 0 14 0;
+#X connect 23 0 24 0;
+#X connect 25 0 26 0;
+#X connect 26 0 23 0;
+#X connect 27 0 17 1;
+#X connect 29 0 31 0;
+#X restore 288 11 pd score_electronics;
+#X restore 42 16 pd parameters_monitor_arrays;

@@ -1,0 +1,973 @@
+﻿; Antescofo score generated using native importer
+; Copyright (c) IRCAM 2015
+; Designed by Robert Piéchaud
+
+; Original file: music.midi
+; MIDI file type 1 (multiple tracks)
+; Converted to Antescofo on Wed Dec  8 23:15:17 2021
+
+; start
+
+; ----------- measure 1 --- beat 0 --- time signature 4/4
+
+BPM 17
+group A
+{
+  section symbol A
+  smooth 10000
+  darkness 0 80
+  vibrato 1
+  vib_coeficient 1   
+    ; initial_chord bang
+    ;array1_write 0.4 13
+  original 0
+  original 0.4 25000
+  darkness 1
+  darkness 0 25000
+  noise_mod 0
+  harmonics 0
+  amp_modulation 0.3 5000
+  amp_coeficient 0.3
+  note_followers_on 0
+  note_followers_ring_on 0
+  }
+  array1_write 0.4 14
+  500 ms array1_write 0.3 13
+  600 ms array1_write 0.26 12
+  700 ms array1_write 0.2 11
+  800 ms array1_write 0.14 10
+  900 ms array1_write 0.13 9
+  1000 ms array1_write 0.12 8
+  1100 ms array1_write 0.11 7
+  1200 ms array1_write 0.1 6
+  1300 ms array1_write 0.1 5
+  1200 ms array1_write 0.1 4
+  1100 ms array1_write 0.15 3
+  1000 ms array1_write 0.14 2
+  900 ms array1_write 0.13 1
+  800 ms array1_write 0.2 0
+
+NOTE 0 1 measure1
+NOTE 0 1 
+NOTE 0 1 
+NOTE 0 1 @fermata
+
+; ----------- measure 2 --- beat 4 --- time signature 6/8
+
+BPM 17
+NOTE G#6 3/2 measure2
+CHORD (G6 -G#6) 1/2
+CHORD (D6 -G6 -G#6) 1/2
+vib_coeficient 2
+CHORD (-D6 F#6 -G6 -G#6) 1/2
+
+; ----------- measure 3 --- beat 7 --- time signature 6/8
+BPM 23
+CHORD (-D6 -F#6 -G6) 1/2 measure3
+
+amp_coeficient 0.05
+amp_modulation 0.6 8000
+unison_fade 50
+smooth 600
+note_followers_min 0.45
+note_followers_max 0.7
+note_followers_on 1
+
+CHORD (C#6 -D6 -F#6 -G6) 1/2
+CHORD (B5 -C#6 -D6 -F#6 -G6) 1/2
+
+vib_coeficient 1
+
+CHORD (-B5 -C#6 -D6 -F#6) 1/2
+CHORD (-B5 -C#6 -F#6) 1/2
+
+amp_coeficient 0.03
+
+CHORD (-B5 -C#6 F6) 1/2
+
+; ----------- measure 4 --- beat 10 --- time signature 6/8
+BPM 28
+CHORD (-B5 -C#6 D6 -F6) 1/2 measure4
+
+rand_dyn_min 10
+rand_dyn_range 50
+rand_tempo 400
+rand_amp_on 1
+
+CHORD (-B5 -D6 -F6) 1/2
+CHORD (G#5 -D6 -F6) 1/2
+CHORD (-G#5 C#6 -D6 -F6) 1/2
+CHORD (G5 -G#5 -C#6 -D6 -F6) 1/2
+
+vib_coeficient 5
+
+CHORD (-G5 -G#5 -C#6 -D6) 1/2
+
+; ----------- measure 5 --- beat 13 --- time signature 6/8
+
+BPM 34
+CHORD (-G5 -G#5 -C#6) 1/2 measure5
+
+array1_write 0.1 14
+array1_write 0.1 13
+array1_write 0.1 12
+array1_write 0.1 11
+array1_write 0.1 10
+array1_write 0.1 9
+
+CHORD (E5 -G5 -G#5 -C#6) 1/2
+CHORD (-E5 -G5 -C#6) 1/2
+
+vib_coeficient 3
+amp_coeficient 0.1
+
+CHORD (-E5 -G5 B5) 1/2
+CHORD (-E5 -B5) 1/2
+CHORD (-E5 G#5 -B5) 1/2
+
+; ----------- measure 6 --- beat 16 --- time signature 6/8
+
+CHORD (-E5 G5 -G#5 -B5) 1/2 measure6
+CHORD (C5 -G5 -G#5 -B5) 1/2
+CHORD (G4 -C5 -G5 -G#5 -B5) 1/2
+
+amp_coeficient 0.2
+BPM 33
+CHORD (-G4 -C5 -G5 -G#5) 1/2
+CHORD (F#4 -G4 -C5 -G5 -G#5) 1/2
+BPM 31
+CHORD (-F#4 -G4 -C5 -G5) 1/2
+
+; ----------- measure 7 --- beat 19 --- time signature 6/8
+
+BPM 29
+CHORD (-F#4 -G4 -C5 E5) 1/2 measure7
+CHORD (-F#4 -G4 -E5) 1/2
+CHORD (-F#4 -E5) 1/2
+CHORD (-F#4 C5 -E5) 1/2
+CHORD (C#4 -F#4 -C5 -E5) 1/2
+CHORD (-C#4 -F#4 G4 -C5 -E5) 1/2
+
+smooth 1700
+note_followers_on 0
+rand_dyn_min 1
+rand_dyn_range 12
+rand_tempo 80
+
+; ----------- measure 8 --- beat 22 --- time signature 6/8
+
+BPM 23
+CHORD (-C#4 -F#4 -G4 -C5 -E5) 3 measure8
+
+1 rand_dyn_min 2
+amp_coeficient 0.1
+rand_dyn_range 20
+rand_tempo 130
+1 rand_dyn_range 40
+
+
+; ----------- measure 9 --- beat 25 --- time signature 6/8
+
+BPM 20
+CHORD (-C#4 -F#4 -G4 -C5) 1/2 measure9
+
+original 0.4
+rand_amp_on 0
+note_followers_on 1
+
+CHORD (-C#4 -G4 -C5) 1
+CHORD (-C#4 -G4) 3/2
+
+amp_coeficient 0.05
+smooth 3000
+
+
+; ----------- measure 10 --- beat 28 --- time signature 6/8
+
+NOTE G6 3/2 measure10
+
+array1_zero_now bang
+array1_write 0.5 14
+array1_write 0.5 13
+array1_write 0.4 12
+array1_write 0.2 11
+array1_write 0.1 10
+array1_write 0.1 9
+amp_coeficient 0.02
+
+CHORD (F#6 -G6) 1
+
+smooth 3000
+  
+CHORD (F6 -F#6 -G6) 1/2
+
+; ----------- measure 11 --- beat 31 --- time signature 6/8
+
+CHORD (-F6 -F#6) 1 measure11
+
+amp_coeficient 0.01
+	
+note_followers_ring_on 1
+
+amp_modulation_bright 0.4
+amp_coeficient_bright 0.05
+rand_amp_on_bright 1
+rand_dyn_min_bright 0
+rand_dyn_range_bright 40
+rand_tempo_bright 450
+
+CHORD (-F6 -F#6 F#7) 1/2
+
+bright_on 1 1600
+original 0 4000
+array1_zero 1 4000
+ring_modulation 0.3 2600
+
+CHORD (-F6 -F#7) 1
+
+bright_on 0 7000
+ring_modulation 0 3000
+
+NOTE -F#7 1/2
+
+original 0.3 7000
+
+
+; ----------- measure 12 --- beat 34 --- time signature 6/8
+
+NOTE 0 3/2 measure12
+
+amp_coeficient 0.03
+amp_modulation 1 10000
+
+
+NOTE D6 3/2
+
+; ----------- measure 13 --- beat 37 --- time signature 6/8
+
+CHORD (C#6 -D6) 1/2 measure13
+
+smooth 3000
+
+CHORD (-C#6 -D6 A#6) 1/2
+
+rand_tempo 300
+rand_dyn_range 50
+rand_dyn_min 1
+rand_amp_on 1
+
+note_followers_on 0
+note_followers_ring_on 1
+
+amp_modulation_bright 0.4
+amp_coeficient_bright 0.01
+
+array2_zero 1 1000
+
+rand_tempo_bright 200
+rand_amp_on_bright 1
+rand_dyn_min_bright 1
+rand_dyn_range_bright 12
+bright_on 0.05 4000
+
+CHORD (B5 -C#6 -D6 -A#6) 1/2
+
+smooth 1500
+
+CHORD (-B5 -C#6 -A#6) 1
+
+ring_modulation 0.3 1100
+array1_write 0.5 9
+
+CHORD (E3 -B5 -C#6) 1/2
+
+; ----------- measure 14 --- beat 40 --- time signature 6/8
+
+CHORD (-B5 G#6) 1 measure14
+
+ring_modulation 0 2000
+note_followers_ring_on 0
+
+rand_amp_on 0
+array1_zero 0
+amp_coeficient 0
+smooth 4000
+array1_write 0.4 14
+array1_write 0.3 13
+array1_write 0.2 12
+array1_write 0.2 11
+array1_write 0.1 10
+array1_write 0.1 9
+array1_write 0.1 8
+array1_write 0.1 7
+array1_write 0.1 6
+array1_write 0.1 5
+array1_write 0.1 4
+array1_write 0.2 3
+array1_write 0.2 2
+array1_write 0.2 1
+vib_coeficient 4
+
+NOTE -G#6 1
+
+bright_on 0.7 1600
+note_followers_on 1
+
+NOTE 0 1
+
+; ----------- measure 15 --- beat 43 --- time signature 6/8
+
+NOTE G#5 3/2 measure15
+
+smooth 2000
+bright_on 0 7000
+
+vib_coeficient 6
+
+CHORD (B3 G5 -G#5) 1
+CHORD (-B3 E5 -G5 -G#5) 1/2
+
+; ----------- measure 16 --- beat 46 --- time signature 6/8
+
+CHORD (-B3 -E5 -G5) 1/2 measure16
+NOTE C#7 1/2
+
+array1_write 0.5 8
+
+NOTE C6 1/2
+CHORD (E5 -C6) 3/2
+
+; ----------- measure 17 --- beat 49 --- time signature 6/8
+
+NOTE B3 1/2 measure17
+
+original 0 5000
+
+NOTE 0 1
+NOTE C5 3/2
+
+array1_zero_now bang
+original 0.4 5000
+1/4 array1_write 0.5 0
+smooth 4000
+array1_write 0.4 14
+array1_write 0.3 13
+array1_write 0.2 12
+array1_write 0.2 11
+array1_write 0.1 10
+array1_write 0.1 9
+array1_write 0.1 8
+array1_write 0.1 7
+array1_write 0.1 6
+array1_write 0.1 5
+array1_write 0.1 4
+array1_write 0.2 3
+array1_write 0.2 2
+array1_write 0.2 1
+array1_write 0.2 0
+
+; ----------- measure 18 --- beat 52 --- time signature 6/8
+
+BPM 34
+CHORD (G4 -C5 A6) 1 measure18
+CHORD (F#4 -G4 -C5 -A6) 1/2
+CHORD (-F#4 -G4 -A6) 1/2
+
+note_followers_ring_on 1
+ring_modulation 0.4 3000
+
+CHORD (D#3 -F#4 -G4) 1/2
+
+original 0 4000
+array1_zero 1 3000
+bright_on 0.8 2400
+
+CHORD (-F#4 -G4 G#6) 1/2
+
+
+; ----------- measure 19 --- beat 55 --- time signature 6/8
+
+CHORD (-F#4 -G#6) 1 measure19
+NOTE -G#6 1/2
+
+
+NOTE 0 3/2
+
+; ----------- measure 20 --- beat 58 --- time signature 6/8
+
+NOTE 0 1 measure20
+
+bright_on 0 4000
+amp_modulation 0 4000
+rand_amp_on 0
+note_followers_on 1
+note_followers_ring_on 1
+1 original 0.3 5000
+
+NOTE G5 2
+
+; ----------- measure 21 --- beat 61 --- time signature 6/8
+
+NOTE F7 1/2 measure21
+array1_zero_now bang
+array1_write 0.5 2
+array1_write 0.5 4
+array1_write 0.4 6
+array1_write 0.3 8
+array1_write 0.3 9
+NOTE G#3 5/2 @fermata
+
+
+; ----------- measure 22 --- beat 64 --- time signature 6/8
+
+NOTE C6 1 measure22
+
+
+original 0.3 2000
+
+CHORD (G5 -C6) 1/2
+
+ring_modulation 0.3 1500
+
+  
+CHORD (F#5 -G5 -C6) 1
+
+ring_modulation 0 2800
+
+CHORD (D#3 -F#5 -G5 -C6) 1/2
+
+; ----------- measure 23 --- beat 67 --- time signature 6/8
+
+CHORD (-D#3 -F#5 -G5) 1 measure23
+CHORD (-D#3 -F#5) 1/2
+NOTE 0 3/2
+
+; ----------- measure 24 --- beat 70 --- time signature 6/8
+
+NOTE 0 1/2 measure24
+NOTE F6 2
+CHORD (G#2 C#4) 1/2
+
+; ----------- measure 25 --- beat 73 --- time signature 6/8
+
+CHORD (-C#4 D6) 1/2 measure25
+CHORD (B3 -C#4 -D6) 1/2
+
+ring_modulation 0.33 1200
+
+CHORD (D#3 -B3 -C#4 -D6) 1
+ring_modulation 0 9000
+
+CHORD (-D#3 -B3 -C#4) 1/2
+CHORD (-D#3 -B3) 1/2
+
+; ----------- measure 26 --- beat 76 --- time signature 6/8
+
+CHORD (-D#3 -B3) 1/2 measure26
+
+array1_zero 1 2000
+NOTE -D#3 1/2
+NOTE A2 2
+
+; ----------- measure 27 --- beat 79 --- time signature 6/8
+
+NOTE F#5 1/2 measure27
+NOTE C2 3/2
+ring_modulation 0.38 1000
+CHORD (-C2 C#3) 1/2
+ring_modulation 0 1000
+CHORD (-C#3 D#5) 1/2
+harmonics 0.3 4000
+
+
+; ----------- measure 28 --- beat 82 --- time signature 6/8
+
+CHORD (C3 -C#3) 1/2 measure28
+  
+harmonics 0 3000
+ring_modulation 0.3 1100
+
+CHORD (B2 -C3 -C#3) 1
+CHORD (-B2 -C3 -C#3 G7) 1/2
+
+rand_amp_on_bright 1
+rand_tempo_bright 800
+rand_dyn_range_bright 80
+rand_dyn_min_bright 30
+bright_on 0.4 10
+
+
+CHORD (-B2 -C3 -G7) 1
+
+; ----------- measure 29 --- beat 85 --- time signature 6/8
+
+CHORD (-B2 -G7) 1/2 measure29
+NOTE C#3 1/2
+
+ring_modulation 0.4 260
+
+NOTE F#7 2
+
+ring_modulation 0 500
+rand_amp_on 1
+rand_tempo 700
+original 0.4 3000
+harmonics 0.5 3000
+
+
+; ----------- measure 30 --- beat 88 --- time signature 6/8
+
+NOTE 0 3/2 measure30
+
+vib_coeficient 1
+bright_on 0 3300
+noise_bp_f 130
+noise_bp_q 0
+noise_mod 2 3000
+CHORD (A2 C4) 1
+CHORD (G#2 -A2 -C4) 1/2
+ring_modulation 0.4 1300
+
+; ----------- measure 31 --- beat 91 --- time signature 6/8
+
+CHORD (E2 -G#2 -A2 -C4) 1/2 measure31
+ring_modulation 0 5000
+CHORD (-E2 -G#2 -A2 D#7) 1/2
+bright_on 0.4 300
+CHORD (-E2 -G#2 -A2 B3) 1/2
+CHORD (-E2 -G#2 -B3) 1
+CHORD (-E2 -B3) 1/2
+
+; ----------- measure 32 --- beat 94 --- time signature 6/8
+
+NOTE C#7 1/2 measure32
+rand_amp_on 0
+note_followers_on 0
+note_followers_ring_on 0
+bright_on 0 2300
+smooth 1000
+initial_chord bang
+original 0 3000
+NOTE 0 1
+NOTE B2 3/2
+ring_modulation 0.4 3300
+
+; ----------- measure 33 --- beat 97 --- time signature 6/8
+
+NOTE -B2 1/2 measure33
+NOTE A6 1/2
+initial_chord_p bang
+NOTE D#3 2
+
+
+; ----------- measure 34 --- beat 100 --- time signature 6/8
+
+BPM 34
+NOTE 0 5/2 measure34
+smooth 700
+note_followers_on 1
+note_followers_ring_on 1
+note_followers_max 0.9
+note_followers_min 0.6
+NOTE C#7 1/2
+
+; ----------- measure 35 --- beat 103 --- time signature 6/8
+
+CHORD (B2 -C#7) 1 measure35
+CHORD (A2 -B2 -C#7) 1/2
+CHORD (G#2 -A2 -B2) 3/2
+
+; ----------- measure 36 --- beat 106 --- time signature 6/8
+
+CHORD (-G#2 -A2) 1/2 measure36
+CHORD (-G#2 -A2 A#5) 1/2
+CHORD (-G#2 -A#5) 1/2
+CHORD (D#3 -A#5) 1/2
+CHORD (B2 -A#5) 1/2
+CHORD (-B2 D6) 1/2
+
+; ----------- measure 37 --- beat 109 --- time signature 6/8
+
+NOTE -B2 1/2 measure37
+NOTE 0 3/2
+array1_zero_now bang
+noise_mod 3 100
+
+NOTE C7 1/2
+noise 0.5 600
+CHORD (D#2 -C7) 1/2
+noise_mod 2 2000
+noise 0 5500
+
+; ----------- measure 38 --- beat 112 --- time signature 6/8
+
+NOTE -C7 1 measure38
+rand_tempo 1200
+NOTE 0 1/2
+NOTE A2 1
+CHORD (-A2 D#5) 1/2
+
+; ----------- measure 39 --- beat 115 --- time signature 6/8
+
+CHORD (G#2 -D#5) 1/2 measure39
+smooth 2000
+original 0.3 2000
+initial_chord bang
+NOTE -D#5 1
+NOTE F#7 1/2
+NOTE E2 1/2
+smooth 400
+rand_tempo 400
+rand_amp_on 1
+array1_zero_now bang
+noise 0.4 700
+noise_mod 2 500
+NOTE 0 1/2
+
+; ----------- measure 40 --- beat 118 --- time signature 6/8
+
+NOTE 0 1/2 measure40
+array1_zero_now bang
+noise_mod 0.1 1200
+noise 0.01 1500
+original 0.01 2000
+CHORD (D#2 F#5) 1/2
+CHORD (C2 -F#5) 1/2
+array1_zero 1 1200
+harmonics 0.4 3000
+CHORD (E2 -F#5) 1
+CHORD (D#2 -E2) 1/2
+
+; ----------- measure 41 --- beat 121 --- time signature 6/8
+
+CHORD (C2 -D#2 -E2 G#2) 1/2 measure41
+harmonics 0 4500
+bright_on 0.4 3500
+rand_tempo_bright 1000
+rand_dyn_range_bright 50
+rand_dyn_min_bright 20
+CHORD (-C2 -D#2 -E2 G6) 1
+CHORD (-C2 -D#2 -G6) 1
+CHORD (-C2 F7) 1/2
+
+; ----------- measure 42 --- beat 124 --- time signature 6/8
+
+NOTE A#5 1 measure42
+CHORD (C#3 -A#5) 1/2
+array1_zero 0
+smooth 1200
+array1_write 0.5 2
+100 array1_write 0.5 4
+200 array1_write 0.4 6
+400 array1_write 0.3 8
+600 array1_write 0.3 9
+
+array2_zero 1 1300
+
+CHORD (D#2 -A#5) 1/2
+CHORD (-D#2 D6) 1/2
+NOTE -D#2 1/2
+
+; ----------- measure 43 --- beat 127 --- time signature 6/8
+
+NOTE C2 1/2 measure43
+NOTE F6 1
+harmonics 0.4 600
+CHORD (G#2 -F6) 1/2
+
+CHORD (D#3 -F6) 1/2
+array1_zero_now bang
+rand_tempo 1300
+rand_tempo_bright 1300
+array2_zero 1 5000
+
+
+noise_mod 18 600
+  
+NOTE 0 1/2
+
+; ----------- measure 44 --- beat 130 --- time signature 6/8
+
+NOTE 0 1/2 measure44
+noise_mod 0 1000
+CHORD (E2 G#6) 3/2
+array1_zero_now bang
+CHORD (C#3 -G#6) 1/2
+NOTE G7 1/2
+
+; ----------- measure 45 --- beat 133 --- time signature 6/8
+
+CHORD (C2 F#5) 1/2 measure45
+array1_zero_now bang
+noise_mod 15 50
+CHORD (A2 -F#5) 3/2
+smooth 1000
+rand_tempo 1100
+array2_zero 1 6000
+
+rand_tempo_bright 1200
+NOTE 0 1/2
+NOTE D#3 1/2
+
+; ----------- measure 46 --- beat 136 --- time signature 6/8
+
+CHORD (B2 C#7) 1/2 measure46
+CHORD (E2 -C#7) 3/2
+CHORD (C#3 G6) 1/2
+smooth 800
+array2_zero 1 3000
+
+rand_tempo 990
+rand_tempo_bright 1000
+
+NOTE 0 1/2
+
+; ----------- measure 47 --- beat 139 --- time signature 6/8
+
+NOTE C2 1/2 measure47
+smooth 400
+rand_tempo 600
+rand_tempo_bright 800
+CHORD (-C2 D6) 1
+ring_modulation 0 4800
+array2_zero 1 3300
+
+CHORD (A2 -D6) 1/2
+NOTE -D6 1/2
+NOTE G#6 1/2
+
+; ----------- measure 48 --- beat 142 --- time signature 6/8
+
+CHORD (F3 D#6 -G#6) 1/2 measure48
+CHORD (-F3 F#6 -G#6) 1/2
+CHORD (B3 -F#6 -G#6) 1/2
+CHORD (-B3 -G#6 A#6) 1/2
+CHORD (-B3 C6 A6) 1/2
+CHORD (D#4 -C6 -A6) 1/2
+
+; ----------- measure 49 --- beat 145 --- time signature 6/8
+
+CHORD (-D#4 E6 -A6) 1/2 measure49
+CHORD (-D#4 F#6 C7) 1/2
+CHORD (-D#4 C#6 -F#6) 1/2
+CHORD (E4 -C#6 -F#6) 1/2
+CHORD (C4 -C#6 G6) 1/2
+CHORD (-C4 G#6 C#7) 1/2
+
+; ----------- measure 50 --- beat 148 --- time signature 6/8
+
+CHORD (-C4 C#6 -G#6) 1/2 measure50
+CHORD (A#4 -C#6 -G#6) 1/2
+CHORD (B4 -C#6 B6) 1/2
+CHORD (-B4 E6 D#7) 1/2
+CHORD (D4 -E6 F6) 1/2
+CHORD (D#4 -F6 F#6) 1/2
+
+; ----------- measure 51 --- beat 151 --- time signature 6/8
+
+CHORD (-D#4 A#6 F7) 1/2 measure51
+CHORD (E4 F#6 -A#6) 1/2
+CHORD (A#4 C6 -F#6) 1/2
+CHORD (E6 F#7) 1/2
+CHORD (-E6 F#6) 1/2
+NOTE G7 1/2
+
+; ----------- measure 52 --- beat 154 --- time signature 6/8
+
+BPM 68
+NOTE -G7 1/2 measure52
+CHORD (C#7 -G7) 1/2
+CHORD (-C#7 F7 -G7) 1/2
+CHORD (A6 -C#7 -F7) 1/2
+CHORD (-A6 -C#7 -F7 F#7) 1/2
+CHORD (-A6 C7 -F7 -F#7) 1/2
+
+; ----------- measure 53 --- beat 157 --- time signature 6/8
+
+CHORD (-C7 D#7) 2/5 measure53
+CHORD (G#6 -C7 -D#7) 7/15
+CHORD (-G#6 -C7 -D#7 F7) 2/5
+CHORD (-G#6 A6 -D#7 -F7) 7/15
+CHORD (-G#6 -A6 C#7 -D#7) 2/5
+CHORD (G6 -G#6 -C#7 -D#7) 2/5
+CHORD (-G6 -C#7 -D#7) 2/5
+
+; ----------- measure 54 --- beat 160 --- time signature 6/8
+
+CHORD (G#6 -C#7 -D#7) 1/14 measure54
+CHORD (-G#6 -D#7) 1/2
+CHORD (-G#6 C7 -D#7) 7/15
+CHORD (F#6 -G#6 -C7 -D#7) 1/2
+CHORD (-F#6 -C7 -D#7) 1/14
+CHORD (-F#6 -C7 C#7) 7/15
+CHORD (-F#6 G6 -C7 -C#7) 8/15
+CHORD (-F#6 -G6 A6 -C7) 4/9
+
+; ----------- measure 55 --- beat 163 --- time signature 6/8
+
+CHORD (-F#6 -A6 -C7) 1/14 measure55
+CHORD (-F#6 -A6) 2/5
+CHORD (-F#6 -A6 C7) 7/8
+CHORD (-F#6 G#6 -A6) 1/3
+CHORD (F6 -F#6 -G#6 -A6) 18/14
+
+; ----------- measure 56 --- beat 166 --- time signature 6/8
+
+CHORD (-F#6 G6) 1/2 measure56
+CHORD (F6 -F#6 -G6) 1/2
+CHORD (-F6 -F#6 -G6 G#6) 1/2
+CHORD (-F6 -G6 -G#6) 1/2
+CHORD (-F6 F#6 -G6) 1/2
+CHORD (D6 -F6 -F#6 -G6) 1/2
+
+; ----------- measure 57 --- beat 169 --- time signature 6/8
+
+CHORD (-D6 -G6) 4/9 measure57
+CHORD (-D6 F6 -G6) 1/2
+CHORD (-D6 -F6 F#6 -G6) 2/5
+CHORD (C#6 -D6 -F#6) 4/3
+CHORD (-C#6 -D6 F6 -F#6) 1/3
+
+; ----------- measure 58 --- beat 172 --- time signature 6/8
+
+CHORD (-C#6 -F6 -F#6) 1/14 measure58
+CHORD (-C#6 -F6) 1/2
+CHORD (-C#6 -F6 F#6) 1
+CHORD (-C#6 -F6) 4/9
+CHORD (B5 -C#6 -F6) 1
+
+; ----------- measure 59 --- beat 175 --- time signature 6/8
+
+CHORD (-C#6 -F6) 1/2 measure59
+CHORD (-C#6 D6 -F6) 2/5
+CHORD (A#5 -C#6 -D6 -F6) 2/5
+CHORD (-A#5 -D6 -F6) 4/9
+CHORD (-A#5 B5 -D6 -F6) 4/9
+CHORD (-A#5 -B5 C#6 -D6) 2/5
+CHORD (G#5 -A#5 -C#6) 2/5
+
+; ----------- measure 60 --- beat 178 --- time signature 6/8
+
+CHORD (-G#5 D6) 1/2 measure60
+CHORD (-G#5 A#5 -D6) 1/2
+CHORD (-G#5 -A#5 C#6 -D6) 1/2
+CHORD (G5 -G#5 -C#6) 3/2
+
+; ----------- measure 61 --- beat 181 --- time signature 6/8
+
+CHORD (-G#5 B5) 2/5 measure61
+CHORD (F#5 -G#5 -B5) 7/15
+CHORD (-F#5 -G#5 -B5 C#6) 4/9
+CHORD (-F#5 G5 -B5 -C#6) 4/9
+CHORD (-F#5 -G5 A#5 -B5) 4/9
+CHORD (-F#5 -A#5 -B5) 4/5
+
+; ----------- measure 62 --- beat 184 --- time signature 6/8
+
+BPM 34
+CHORD (-F#5 -A#5 -B5) 1/12 measure62
+CHORD (-F#5 -B5) 1/2
+CHORD (-F#5 G#5 -B5) 1/2
+CHORD (E5 -F#5 -G#5 -B5) 1/2
+CHORD (-E5 -G#5 A#5) 1/2
+CHORD (-E5 F#5 -G#5 -A#5) 1/2
+CHORD (-E5 -F#5 G5 -G#5) 2/5
+
+; ----------- measure 63 --- beat 187 --- time signature 6/8
+
+CHORD (D#4 -E5 -F#5 -G5 -G#5) 1/12 measure63
+CHORD (-D#4 -G5) 2/5
+CHORD (-D#4 -G5 G#5) 3/8
+CHORD (-D#4 E4 -G5 -G#5) 1/2
+CHORD (-D#4 -E4 F#5 -G5) 3/8
+CHORD (C4 -D#4 -F#5 -G5) 5/4
+
+; ----------- measure 64 --- beat 190 --- time signature 6/8
+
+CHORD (-C4 -D#4 -F#5 -G5) 1/14 measure64
+CHORD (-D#4 -F#5) 1/2
+CHORD (G#3 -D#4 -F#5) 1
+CHORD (-G#3 C4 -F#5) 1/2
+CHORD (-G#3 -C4 E5 -F#5) 1/2
+CHORD (F3 -G#3 -E5 -F#5) 4/9
+
+; ----------- measure 65 --- beat 193 --- time signature 6/8
+
+CHORD (-F3 -G#3 -E5 -F#5) 1/14 measure65
+CHORD (-F3 -F#5) 2/5
+CHORD (-F3 G#3 -F#5) 7/15
+CHORD (-F3 -G#3 D#5 -F#5) 2/5
+CHORD (C3 -F3 -D#5) 4/9
+CHORD (-C3 -F3 -D#5 E5) 7/8
+CHORD (-C3 -F3 C5 -D#5) 1/3
+
+; ----------- measure 66 --- beat 196 --- time signature 6/8
+
+CHORD (B2 -C5 -D#5) 1/12 measure66
+CHORD (-B2 -C5) 1/2
+CHORD (-B2 -C5 D#5) 7/15
+CHORD (-B2 C3 -C5 -D#5) 8/15
+CHORD (-B2 -C3 G#4 -C5) 7/15
+CHORD (-B2 D#3 -G#4 -C5) 1
+
+; ----------- measure 67 --- beat 199 --- time signature 6/8
+
+CHORD (-B2 -G#4 -C5) 1/12 measure67
+CHORD (-B2 -C5) 2/5
+CHORD (-B2 F4 -C5) 2/5
+CHORD (-B2 C#3 -F4 -C5) 7/15
+CHORD (-C#3 -F4 G#4) 2/5
+CHORD (-C#3 D#3 -F4 -G#4) 1/2
+CHORD (-C#3 -D#3 -F4 C5) 2/5
+CHORD (-C#3 -C5) 1/3
+
+; ----------- measure 68 --- beat 202 --- time signature 6/8
+
+CHORD (-C#3 -C5) 1/9 measure68
+CHORD (-C#3 F3) 1
+CHORD (-C#3 B3) 1/2
+CHORD (B2 -C#3 -B3) 1/2
+CHORD (-B2 -C#3 -B3 C4) 8/9
+
+; ----------- measure 69 --- beat 205 --- time signature 6/8
+
+BPM 17
+CHORD (-B2 -C#3 -B3 -C4) 1/9 measure69
+CHORD (-C#3 D#3) 2/5
+CHORD (A2 -C#3 -D#3) 1/2
+CHORD (-A2 -C#3 -D#3 B3) 2/5
+CHORD (-A2 B2 -D#3 -B3) 1/2
+CHORD (-A2 -B2 C#3 -D#3) 2/5
+CHORD (G#2 -A2 -C#3 -D#3) 2/5
+CHORD (-G#2 -C#3 -D#3) 1/3
+
+; ----------- measure 70 --- beat 208 --- time signature 6/8
+
+CHORD (-G#2 -C#3 -D#3) 1/9 measure70
+CHORD (A2 -C#3 -D#3) 1/14
+CHORD (-A2 -D#3) 1/2
+CHORD (-A2 C#3 -D#3) 4/9
+CHORD (E2 -A2 -C#3 -D#3) 1/2
+CHORD (-E2 -C#3 -D#3) 1/14
+CHORD (-E2 -C#3) 4/9
+CHORD (-E2 G#2 -C#3) 5/9
+CHORD (-E2 -G#2 B2 -C#3) 1/3
+
+; ----------- measure 71 --- beat 211 --- time signature 6/8
+
+CHORD (-E2 -G#2 -B2 -C#3) 1/9 measure71
+CHORD (D#2 -B2 -C#3) 1/14
+CHORD (-D#2 -B2) 2/5
+CHORD (-D#2 -B2 C#3) 2/5
+CHORD (-D#2 E2 -B2 -C#3) 1/2
+CHORD (-D#2 -E2 A2 -B2) 2/5
+CHORD (C2 -D#2 -A2 -B2) 16/14
+
+; ----------- measure 72 --- beat 214 --- time signature 6/8
+
+CHORD (-C2 -D#2 -A2 -B2) 2/14 measure72
+CHORD (-C2 -D#2 G#2 -A2 -B2) 40/14
+
+; ----------- measure 73 --- beat 217 --- time signature 6/8
+
+CHORD (-C2 -D#2 -G#2 -A2 -B2) 2/14 measure73

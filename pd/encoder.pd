@@ -1,0 +1,33 @@
+#N canvas 188 246 1252 632 12;
+#X msg 117 64 open -e /Library/Audio/Plug-Ins/VST/IEM/MultiEncoder.vst
+;
+#X obj 135 258 vstplugin~ 1 16;
+#X f 35;
+#X obj 113 308 send_to_decoder, f 43;
+#X obj 58 31 inlet~;
+#X obj 131 24 loadbang;
+#X msg 144 195 vis \$1;
+#X obj 112 130 tgl 15 0 empty empty see_plugin 17 7 0 10 -262144 -1
+-1 1 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 1 2 2 2;
+#X connect 1 3 2 3;
+#X connect 1 4 2 4;
+#X connect 1 5 2 5;
+#X connect 1 6 2 6;
+#X connect 1 7 2 7;
+#X connect 1 8 2 8;
+#X connect 1 9 2 9;
+#X connect 1 10 2 10;
+#X connect 1 11 2 11;
+#X connect 1 12 2 12;
+#X connect 1 13 2 13;
+#X connect 1 14 2 14;
+#X connect 1 15 2 15;
+#X connect 3 0 1 0;
+#X connect 4 0 0 0;
+#X connect 5 0 1 0;
+#X connect 6 0 5 0;
+#X coords 0 -1 1 1 100 60 1 100 100;
